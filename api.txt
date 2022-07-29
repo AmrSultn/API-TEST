@@ -1,0 +1,55 @@
+		test case 5.1 
+
+API: GET /api/v1/Authors
+	Test Case: response should be 200 OK
+	Expected Result: response should be 200 OK
+	Actual Result: 200 OK
+	Status: Pass
+	=====================================================
+		test case5.2
+		
+API: GET /api/v1/Authors
+	Test Case: Objects inside response contain, id, idBook, firstName, lastName
+	Expected Result: Objects inside response contain, id, idBook, firstName, lastName
+	Actual Result: 200 OK
+	Status: Pass
+	=====================================================
+		test case 6.1
+		
+API:  POST /api/v1/Authors	   
+	Test Case: Register a new valid Author successfully
+	Expected Result: egister a new valid Author successfully and response code "201 Created". | AssertionError: expected response to have status code 201 but got 200
+	Actual Result: 200 OK
+	Status: fail
+	====================================================
+		test case6.2
+		
+API:post ​/api​/v1​/Authors
+	Test Case:  firstname & lastname should be mandatory
+	Expected Result: firstname & lastname should be mandatory, Status code should be 400 | AssertionError: expected response to have status code 400 but got 200
+	Actual Result: 200 OK
+	Status: fail
+	====================================================
+		test case7
+		
+API:  POST /api/v1/Authors/authors/books/2
+	Test Case: Searching with valid idBook should return relative data in response body.
+	Expected Result: Searching with valid idBook should return relative data in response body.
+	Actual Result: 200 OK
+	Status: Pass
+	====================================================
+		test case8
+API: PUT /api/v1/Authors/1
+	Test Case:Author's data is updated successfully.
+	Expected Result:Author's data is updated successfully - Status code
+					:Author's data is updated successfully - Body
+	Actual Result: 200 OK
+	Status: Pass
+	====================================================
+		test case8
+API: GET /api/v1/Authors/1
+	Test Case:The author's data is changed in GET request, Check the body of the return.
+	Expected Result: "id": 1, "idBook": 1, "firstName": "amr", "lastName": "sultan"
+	Actual Result: "id": 1, "idBook": 1, "firstName": "First Name 1", "lastName": "Last Name 1"
+   	Status: Fail
+	
